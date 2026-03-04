@@ -1,7 +1,7 @@
 # 📄 Compilação de Dados – Importação e Exportação do Estado de São Paulo
 **Data de criação:** 15/09/2025  
 **Última atualização:** 10/11/2025  
-**Autores:** Jackson Penaforte e Vitor Amaral  
+**Autores:**   
 
 ---
 
@@ -76,3 +76,8 @@ finalexpSP = finalexpm[finalexpm['SG_UF_MUN'] == 'SP']
 # Visualiza as últimas linhas dos dados tratados
 finalexpSP.tail(5)
 finalimpSP.tail(5)
+
+# Exporta os arquivos finais limpos e filtrados por SP
+finalimpSP.to_csv(origem + 'finalimpSP.csv', index=False)
+finalexpSP.to_csv(origem + 'finalexpSP.csv', index=False)
+```
